@@ -1,0 +1,135 @@
+header {
+  background: $color-gray-very-weak;
+  .logo {
+  	padding-top: 37px;
+    padding-bottom: 23px;
+  }
+
+  .hidden-md-up{
+  	padding-top: 65px;
+	  padding-bottom: 24px;
+  	.navbar-toggle {
+	  	background: $color-green;
+	  	span {
+	  		background-color: $color-white;
+	  	}
+	  }
+	}
+
+  nav {
+    padding: 37px 0px 23px 0px;
+
+    #myNavbar {
+    	padding: 0px;
+    }
+
+	  ul {
+	  	float: right !important;
+	    li {
+	    	text-transform: uppercase;
+	    	border: 0px;
+	    	background: $color-gray-very-weak;
+	    	
+	    	&:hover {
+	    		background: $color-gray-very-weak;
+	    	}
+	    	&.open > a {
+	    		border: 1px solid;
+	    		border-color: $color-dark-gray !important;
+	    		border-bottom: 0px;
+	    		color: $color-weak-blue;
+	    	}
+
+		    a {
+		    	border: 0px;
+		    	padding: 16px 28px 12px 28px;
+		    	background-color: $color-gray-very-weak !important;
+		    	&:hover{
+			    	color: $color-weak-blue;
+			    	background-color: $color-gray-very-weak !important;
+			    	font-weight: 500;
+			    }
+		    }
+		    span.caret {
+		    	background: url(../img/arrow-down.png);
+		    	border: 0px;
+			    width: 19px;
+			    height: 11px;
+			    margin-left: 10px;
+		    }
+		    ul.dropdown-menu {
+		    	width: 100%;
+	  			min-width: auto;
+	  			border: 1px solid $color-dark-gray;
+	  			border-top: 0px;
+	  			padding: 0px;
+	  			box-shadow: none;
+
+	  			a {
+	  				text-transform: capitalize;
+	  				white-space: inherit;
+	  				color:  $color-gray;
+						font-size: 12px;/* Aproximação devido à substituição de fonte */
+						font-weight: 400;
+						padding: 3px 15px;
+						&:hover{
+			    		color: $color-weak-blue;
+			    	}
+	  			}
+		    }
+		  }
+		}
+  }
+
+  hr {
+		background: $color-weak-blue;
+		width: 100%;
+		height: 5px;
+		margin-bottom: 0px;
+	}
+
+	@media all and (max-width: 991px) {
+  	.hidden-md-up .navbar-toggle {
+  		display: block !important;
+  	}
+  	nav {
+  		padding: 0px !important;
+    	min-height: auto !important;
+    	margin-bottom: 0px !important;
+
+    	#myNavbar {
+    		display: none !important;
+    		width: 100%;
+	    	text-align: center;
+	    	margin: 0px;
+    		&.in {
+    			display: block !important;
+    		}
+ 				ul.dropdown-menu {
+					position: relative !important;
+		   		width: 100% !important;
+		    	text-align: center;
+					li {
+						border: 1px solid $color-gray-weak;
+						padding: 5px 0px;
+						ul {
+							li{
+								a:hover{
+									color: #38c1c8;
+								}
+							}
+						}
+					}
+				}
+    	}
+    	span.caret {
+    		margin-right: -19px;
+    	}
+  	}
+  }
+  @media all and (min-width: 992px){
+  	.hidden-md-up{
+  		display: none;
+  	}
+  }
+}

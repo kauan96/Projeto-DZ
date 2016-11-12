@@ -1,0 +1,29 @@
+footer {
+  background-color: $color-gray-weak;
+
+  p {
+		padding: 24.5px 0px;
+		display: inline-block;
+    margin: 0px 10px;
+    &:last-of-type {
+  		margin: 0 auto;
+  	}
+		a {
+	  	font-family: 'Lato', sans-serif;
+			&:hover {
+				color: $color-gray;
+				text-decoration: none;
+			}
+			.icon {
+		  	margin-right: 5px;
+		  }
+		  .logo-footer {
+		  	margin-left: 5px;
+		  }
+	  }
+	}
+
+	@media all and (max-width: 991px) {
+		text-align: center;
+	}
+}
